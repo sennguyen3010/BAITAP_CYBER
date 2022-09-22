@@ -1,0 +1,49 @@
+- git branch: Liệt kê cách branch ở Local.
+- git branch -r : Liệt kê các branch ở Remote(Github).
+- git checkout -b <branch_name> <remote_name/branch_name>: Tạo nhánh mới ở local và kéo code từ Remote(Github) về branch local.
+- git remote add <new_remote>: Tạo remote.
+- git remote add <remote_name> http://dev.example.com/john.git: Tạo remote git
+- git remote rm <remote_name>: Xóa remote. 
+- git remote rename <old-name> <new-name>: Đổi tên remote
+- git remote -v : kiểm tra có bao nhiêu remote và lấy url.
+- git fetch <remote_name> <branch_name>: Lấy branch từ trên Remote(Github) về local
+- git branch -m <old_branch> <new_branch>: Đổi tên ở trên local  
+* Phải tạo branch local xong mới pull dữ liệu từ Remote(Github) về máy được.
+- git push -u origin <new_branch>: tạo branch trên github 
+- git push --set-upstream <remote_name> <new_branch>: Tạo branch và đẩy lên Remote(Github).
+- git push --set-upstream <remote_name> <new_branch>: Cập nhật lại tên branch trên Remote(Github).
+- 2 method xóa branch trên Github:
+	(
+		- git push <remote_name> --delete <old_branch>: Xóa branch ở trên Remote(Github)
+		- git push <remote_name> :<old_branch>: Xóa branch ở trên Remote(Github)
+	)
+- git push <remote_name> <branch_name>: đẩy code lên trên Remote(Github) với branch_name.
+- git pull <remote_name> <branch_name>: lấy code từ trên Remote(Github) về máy.
+- git merge --abort: giúp thoát khỏi quá trình hợp nhất và quay trở lại trạng thái trước khi quá trình hợp nhất bắt đầu
+
+	-- MERGE: 
+pull dữ liệu từ Github cần merge về branch local mới và merge với branch local hiện tại,
+-B1: git checkout -b <new_branch> origin/<remote_name>.
+-B2: git merge <branch_local>
+-B3: Chỉnh lại code cần thay đổi trên visualcode
+-B4: git add -A
+-B5: git commit -m""
+-B6: git push origin HEAD:<branch_Git>
+
+ -- giải quyết xung đột khi push: (vd: push từ branch "test" lên branch "master"
+- B1: git pull origin/master: pull code từ "master" về local.
+- B2: git checkout test: sau đó git checkout lại thằng đang bị lỗi khi push.
+- B3: git merge master: chỉnh lại code cần sửa trên vscode.
+- B4: git status: kiểm tra lại code xem có file nào modifled ko
+- B5: git add -A, git commit -m"...".
+- B6: git push origin test
+- B7: lên Github nhấn merge cho nhanh :))
+
+--- XOÁ ----
+- git branch -D <branch-local> (chuyển qua nhánh khác trc khi xoá)
+
+
+
+	---Remove node_modules ko cho update lên github
+--: touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules ; git status
+

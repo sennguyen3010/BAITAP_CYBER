@@ -1,0 +1,150 @@
+@import '../../themes/variables';
+@import '../../base/base';
+@import '../index/header';
+
+.carousel {
+  height: 800px;
+  background: url(../img/product-header-bg.jpg);
+  background-size: cover;
+  background-position: right bottom;
+  box-shadow: -1px -4px 5px 0px rgba(207, 229, 242, 1);
+  -webkit-box-shadow: -1px -4px 5px 0px rgba(207, 229, 242, 1);
+  -moz-box-shadow: -1px -4px 5px 0px rgba(207, 229, 242, 1);
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    .detail {
+      margin-top: 15px;
+      h1 {
+        @include text($text-6xl, $text-bold, $text-c1-primary);
+      }
+      .desc-title {
+        @include text($text-xl, $text-semibold, $text-c1-dark);
+      }
+      p {
+        @include text($text-base, $text-light, $text-c1-dark);
+      }
+      .btn-info {
+        box-shadow: 0 3px 6px #c9d8f4;
+        cursor: pointer;
+        // background: rgba(0, 0, 0, 0);
+        // padding: 10px 30px;
+        // border: 2px solid #2a73dd;
+        // border-radius: 5px;
+        // font-size: 16px;
+        // font-weight: 600;
+        // color: #2a73dd;
+        @include button(
+          $text-base,
+          $text-semibold,
+          $text-c1-primary,
+          $bg-none,
+          10px 30px,
+          2px solid #2a73dd,
+          5px,
+          $bg-c1-primary,
+          $text-c1-light
+        );
+        margin-bottom: 15px;
+      }
+      .btn-shop {
+      }
+    }
+    .thumbnail {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.product-list {
+  .container {
+    overflow: hidden;
+
+    .title {
+      @include text($text-5xl, $text-bold, $text-c1-dark);
+      text-align: center;
+      padding: 15px 0;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col {
+        width: calc(100% / 3);
+        padding: 0 15px;
+
+        //$i: tên biến chạy (from 0 -> < 6 dừng)
+        @for $i from 0 to 6 {
+          .item-#{$i + 1} {
+            animation: fadeInDown 0.5s * ($i + 1);
+          }
+        }
+
+        .card {
+          box-shadow: #e2ebfc 6px 6px 12px, #fff -6px -6px 12px;
+          padding: 15px;
+
+          img {
+            width: 100%;
+          }
+          .card-body {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            .product-name {
+              @include text($text-xl, $text-semibold, $text-c1-dark);
+              width: calc(100% / 2);
+            }
+            .product-price {
+              @include text($text-base, $text-semibold, $text-c1-dark);
+              width: calc(100% / 2);
+            }
+            .product-desc {
+              font-style: italic;
+              @include text($text-light, $text-light, $text-c1-dark);
+              width: calc(100% / 2);
+            }
+            .product-rating {
+              width: calc(100% / 2);
+
+              i {
+                color: #ff0;
+              }
+            }
+            .btn-buynow {
+              @include button(
+                $text-base,
+                $text-semibold,
+                $text-c1-primary,
+                $bg-none,
+                10px 30px,
+                none,
+                5px,
+                $bg-c1-primary,
+                $text-c1-light
+              );
+              box-shadow: #e2ebfc 6px 6px 12px, #fff -6px -6px 12px;
+              margin-top: 10px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

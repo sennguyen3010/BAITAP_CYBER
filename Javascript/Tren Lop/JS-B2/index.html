@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS-B2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container" style="margin-bottom: 500px">
+      <p id="txt">Hello</p>
+      <input
+        type="text"
+        id="iText"
+        class="form-control w-25"
+        value="cybersoft"
+      />
+      <br />
+      <img id="hinhAnh" src="https://picsum.photos/id/1/200" alt="" />
+
+      <button class="btn btn-success" onclick="handleClick()">click</button>
+      <hr />
+      <h3>vd1: thay đổi nội dung của thẻ</h3>
+      <h3 id="h3Text">học JS thật đỉnh</h3>
+      <p id="pText">nội dung trước khi thay đổi</p>
+      <button id="btnNhanEmDi" onclick="xuLyViDu1()">nhấn em đi</button>
+    </div>
+    <hr />
+    <h3>ví dụ 2: thay đổi nội dung và css của thẻ sau</h3>
+    <div class="alert alert-warning">
+      <p>ẩn nội dung của thẻ p đi</p>
+      <p>thay đổi nội dung thẻ h3 thành cybersoft frontend</p>
+      <p>cho thẻ h3 1 viền border 1px</p>
+      <p>cho thẻ h3 có background màu cam</p>
+      <p>làm mờ thẻ h3 với opacity 0.5</p>
+    </div>
+    <h3 id="h3ViDu2">học frontend tại cybersoft thật đỉnh</h3>
+    <p id="pViDU2">nội dung thay đổi</p>
+    <button id="btnLamMoNao" onclick="xuLyViDu2()">làm mờ nào</button>
+    <hr />
+
+    <h3>ví dụ 3: xây dựng tính năng cho 2 nút button bật và tắt đèn</h3>
+    <button id="btnBatDen">Bật đèn</button>
+    <img id="hinhAnhViDu3" src="./image/pic_bulbon.gif" alt="" />
+    <button id="btnTatDen">Tắt đèn</button>
+
+    <hr />
+    <h3>bài tập 1 xây dựng ứng dụng tính tiền típ</h3>
+    <div class="d-flex justify-content-center">
+      <div class="card w-50">
+        <h3 class="card-header">Tính tiền típ</h3>
+        <div class="card-body">
+          <div class="form-group">
+            <p>Tổng tiền</p>
+            <input type="text" class="form-control" id="tongTienThanhToan" />
+          </div>
+          <div class="form-group">
+            <p>phần trăm tiền tips</p>
+            <select name="" id="phanTramTip" class="form-control">
+              <option value="30">Rất tốt</option>
+              <option value="20">tốt</option>
+              <option value="15">ổn</option>
+              <option value="10">tồi</option>
+              <option value="5">tệ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>số nhân viên tips</p>
+            <input type="text" class="form-control" id="soNhanVienTip" />
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <h3>tiền tips / 1 nhân viên</h3>
+        <p id="tienTip">0$</p>
+        <button id="btnTinh" class="btn btn-danger">Tính</button>
+      </div>
+    </div>
+    <hr />
+    <div>
+      <h4>ví dụ 4: tạo thẻ sd js</h4>
+      <div id="content_4"></div>
+      <button id="btnCreateSection">create section</button>
+    </div>
+    <hr />
+    <h4>
+      bài tập 2: chọn màu sắc để tạo ra các text (thẻ p) với nội dung tương ứng
+      với màu sắc đó
+    </h4>
+    <div class="form-group">
+      <p>chọn màu</p>
+      <select name="" id="color" class="form-control w-25">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>Nội dung</p>
+      <input type="text" id="txt5" class="form-control w-25" />
+    </div>
+    <button class="btn btn-outline-primary" id="btnTaoNoiDung">
+      tạo nội dung
+    </button>
+    <div id="ketQua_5" class="alert alert-secondary mt-2"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

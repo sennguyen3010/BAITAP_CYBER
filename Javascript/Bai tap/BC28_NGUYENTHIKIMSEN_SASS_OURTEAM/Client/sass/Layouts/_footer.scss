@@ -1,0 +1,112 @@
+.footer {
+  background-image: url(../img/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  .footer-layout {
+    padding-top: 6em;
+    padding-bottom: 9em;
+
+    .footer-item {
+      .footer-content {
+        ul {
+          list-style: none;
+          padding-left: 0;
+          li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.8em 0px;
+            a {
+              text-decoration: none;
+              &:hover {
+                opacity: 0.8;
+                color: $text-c1-light;
+              }
+            }
+          }
+        }
+        @include text($text-xs, $text-regular, $text-c1-light);
+
+        h1 {
+          @include text(26px, $text-bold, $text-c1-light);
+          margin-bottom: 36px;
+        }
+        .footer-text {
+          margin-bottom: 10px;
+          span {
+            margin-left: 10px;
+          }
+        }
+        a {
+          color: $text-c1-light;
+          transition: all 200ms ease 0s;
+          margin-right: 15px;
+          &:hover {
+            color: $text-c1-dark;
+          }
+          i {
+            margin-top: 20px;
+          }
+        }
+        .footer-email {
+          .footer-email-input {
+            @extend .find-input;
+            padding: 12px 30px;
+            text-align: center;
+            background: transparent;
+            color: $text-c1-light;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            // height: 3.2 em;
+
+            &::placeholder {
+              color: $text-c1-light;
+            }
+            &:focus {
+              border: 1px solid rgba(255, 255, 255, 1);
+            }
+          }
+        }
+        .footer-subcribe {
+          .btn-subcribe {
+            background-color: #a9027e;
+            @include button(
+              $text-xs,
+              $text-semibold,
+              $text-c1-dark,
+              12px 20px,
+              30px,
+              0 0 0 3em #ffffff inset,
+              0 0 0 1px #ffffff inset,
+              $text-c1-light,
+              all 300ms ease 0s
+            );
+            width: 100%;
+            border: none;
+            padding: 14px 60px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-img-bottom {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    // transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    // xstransform: translateY(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin text($fz, $fw, $c) {
+  font-size: $fz;
+  font-weight: $fw;
+  color: $c;
+}
+
+@mixin button($fz, $fw, $c, $pd, $br, $bs, $bs-hover, $c-hover, $tr) {
+  @include text($fz, $fw, $c);
+  padding: $pd;
+  border-radius: $br;
+  box-shadow: $bs;
+  transition: $tr;
+  &:hover {
+    box-shadow: $bs-hover;
+    color: $c-hover;
+  }
+}

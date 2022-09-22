@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS-B7</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert alert-danger mt-2">
+        <div>cho mảng: <span id="arr">[4, 5, 6, 10, 28, 29, 30, 43]</span></div>
+      </div>
+      <hr />
+      <h3>Bài tập 1: cho phép người dùng thêm 1 phần tử vào mảng</h3>
+      <div class="form-group">
+        <p>Nhập số</p>
+        <input type="number" class="form-control w-50" id="nhapSo1" />
+        <button class="btn btn-success mt-2" id="btnNhapSo1">Thêm số</button>
+      </div>
+
+      <!-- <hr />
+      <div class="tinhTongSoChan">
+        <div class="alert alert-primary p-4" id="ketQua1"></div>
+        <button class="btn btn-primary" id="btnTinhTongSoChan">
+          Tính tổng số chẵn
+        </button>
+      </div> -->
+
+      <hr />
+      <h3>
+        Bài tập 1: cho phép người dùng nhập vào 1 giá trị, xoá giá trị đó ra
+        khỏi mảng, nếu trong mảng không có giá trị đó thì hiển thị không tìm
+        thấy giá trị
+      </h3>
+      <div class="form-group">
+        <p>Nhập vào giá trị cần xoá</p>
+        <input type="number" id="giaTri_2" class="form-control" />
+        <button class="mt-2 btn btn-danger" id="btnXoaGiaTri">
+          Xoá giá trị
+        </button>
+      </div>
+
+      <hr />
+      <h3>ví dụ 1: Lấy dữ liệu thông qua tagname</h3>
+      <section>1</section>
+      <section>2</section>
+      <section>3</section>
+
+      <hr />
+      <h3>ví dụ 2: Lấy dữ liệu thông qua classname</h3>
+      <p class="txt">Thẻ 1</p>
+      <section class="txt text-color">Thẻ 2</section>
+      <article class="txt">Thẻ 3</article>
+      <footer class="txt">Thẻ 4</footer>
+
+      <hr />
+      <h3>Ví dụ 3: Truy xuất dữ liệu thông qua querySelector</h3>
+      <form id="frm">
+        <button class="btn btn-success" type="button" id="btnSubmit">
+          Button submit
+        </button>
+      </form>
+
+      <hr />
+      <h3>ví dụ: truy xuất dữ liệu thông qua querySelectorAll</h3>
+      <form id="frmLogin">
+        <div class="forn-group">
+          <p>Tài khoản</p>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+          <p>Mật khẩu</p>
+          <input type="password" class="form-control" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" id="btnDangNhap" type="button">
+            Đăng nhập
+          </button>
+        </div>
+      </form>
+
+      <hr />
+      <h3>
+        Cho mảng:
+        <span class="alert alert-danger">
+          [12, 15, 17, 19, 22, 44, 66, 32, 37, 7, 5, 2]
+        </span>
+      </h3>
+      <h3>
+        Bài tập 1: In ra vị trí số lớn nhất trong mảng và giá trị lớn nhất trong
+        mảng
+      </h3>
+      <button class="btn btn-success mt-2 btnInSo">In số lớn nhất</button>
+      <div class="alert alert-primary" id="ketQua_b1"></div>
+
+      <hr />
+      <h3>Bài tập 2: In tất cả các số lẻ trong mảng ra màn hình</h3>
+      <button class="btn btn-primary mt-2 btnInSoLe">In tất cả số lẻ</button>
+      <div class="alert alert-primary ketQua_b2"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

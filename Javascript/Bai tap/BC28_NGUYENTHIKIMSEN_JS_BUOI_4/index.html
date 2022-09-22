@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS-B4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" style="margin-top: 50px">
+      <div class="bai1">
+        <h4>
+          Bài 1: cho người dùng nhập vào 3 số nguyên, viết chương trình xuất 3
+          số theo thứ tự tăng dần
+        </h4>
+        <div class="form-group row mt-4">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="so1"
+              placeholder="số thứ 1"
+            />
+          </div>
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="so2"
+              placeholder="số thứ 2"
+            />
+          </div>
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="so3"
+              placeholder="số thứ 3"
+            />
+          </div>
+        </div>
+        <button class="btn btn-success mt-2" id="btnSapXep">Sắp xếp</button>
+        <div class="alert alert-success mt-4 p-4" id="ketQua_b1"></div>
+      </div>
+      <hr />
+      <div class="bai2">
+        <h4>
+          Bài 2: Viết chương trình “Chào hỏi” các thành viên trong gia đình. Dựa
+          vào câu trả lời và đưa ra lời chào phù hợp (gia đình có 4 thành viên:
+          Bố (B), Mẹ (M), anh Trai (A) và Em gái (E))
+        </h4>
+        <div class="form-group row mt-4">
+          <div class="col-6">
+            <select name="" class="form-control" id="thanhVien">
+              <option value="">chọn thành viên</option>
+              <option value="B">Bố</option>
+              <option value="M">Mẹ</option>
+              <option value="A">Anh trai</option>
+              <option value="E">Em gái</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary px-4" id="btnChao">
+              Gửi lời chào
+            </button>
+          </div>
+        </div>
+        <div class="alert alert-primary p-4 mt-4" id="ketQua_b2"></div>
+      </div>
+      <hr />
+      <div class="bai3">
+        <h4>
+          Bài 3: Cho 3 số nguyên. Viết chương trình xuất ra có bao nhiêu số lẻ
+          và bao nhiêu số chẵn.
+        </h4>
+        <div class="form-group row my-4">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="number1"
+              placeholder="Nhập số thứ 1"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="number2"
+              placeholder="Nhập số thứ 2"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="number3"
+              placeholder="Nhập số thứ 3"
+            />
+          </div>
+        </div>
+        <button class="btn btn-danger" id="btnChanLe">Kết quả</button>
+        <div class="alert alert-danger mt-4 p-4" id="ketQua_b3"></div>
+      </div>
+      <hr />
+      <div class="bai4">
+        <h4>
+          Bài 4: Viết chương trình cho nhập 3 cạnh của tam giác. Hãy cho biết đó
+          là tam giác gì
+        </h4>
+        <div class="form-group row my-4">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="side1"
+              placeholder="Nhập cạnh 1"
+            />
+          </div>
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="side2"
+              placeholder="Nhập cạnh 2"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="side3"
+              placeholder="Nhập cạnh 3"
+            />
+          </div>
+        </div>
+        <button class="btn btn-warning" id="btnCanh">Kết quả</button>
+        <div class="alert alert-warning my-4 p-4" id="ketQua_b4"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+.find {
+  //   margin-top: 156px;
+  position: relative;
+  z-index: 3;
+  .find-layout {
+    .find-img {
+      // padding: 20px;
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 120px;
+        // margin-left: 50px;
+      }
+    }
+    .find-box {
+      // padding: 70px;
+      .find-course {
+        border-radius: 10px;
+        padding: 50px 25px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 30px 30px -10px;
+        background-color: $text-c1-light;
+
+        h1 {
+          @include text($text-4xl, $text-bold, $text-c1-dark);
+          margin-bottom: 50px;
+          // text-align: center;
+        }
+        .find-group {
+          position: relative;
+          margin-bottom: 20px;
+          .find-icon {
+            position: absolute;
+            margin: 14px 0 10px 20px;
+            @include text($text-base, $text-semibold, $text-c1-primary)
+              // top: 50%;
+              // left: 20px;
+              // transform: translateY(-50%);
+;
+          }
+
+          .find-message {
+            height: 90px;
+            border-radius: 20px;
+          }
+        }
+        .btn-find {
+          border: none;
+          background-color: $text-c1-light;
+          padding: 14px 60px;
+          margin: 20px 0;
+          width: 100%;
+        }
+      }
+    }
+    .find-bg-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.find-input {
+  padding: 10px 0px 10px 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease 0s;
+  @include text($text-xs, $text-regular, $text-c2-dark);
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+  }
+}
+
+//Responsive
+@media (max-width: $bp-xl) {
+  .find {
+    .find-layout {
+      .find-img {
+        img {
+          margin-left: 0;
+        }
+      }
+      .find-box {
+        // padding: 50px;
+        .find-course {
+          h1 {
+            font-size: $text-3xl;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      /* các lệnh output: hiển thị ra màn hình
+
+      alert('nội dung'): hiển thị nội dung lên hộp thoại của trang web
+      console.log('nội dung'): hiển thị nội dung dưới hộp thoại console
+      document.write('nội dung'): hiển thị nội dung ra giao diện body
+      */
+
+      // console.log('hello');
+      // document.write('hello');
+
+      // cú pháp khai báo biến: var tenBien = 'giá trị';
+
+      var hoTen = 'Nguyễn Sen'; //'noiDung': chuỗi string
+      // document.write(hoTen);
+      // console.log(hoTen);
+
+      var luong = 5000; //giá trị number (số -dùng để tính toán)
+      // document.write(luong);
+
+      var hopLe = true; //boolean: nhận 2 giá trị true or false
+      //để ktra kiểu dữ liệu của biến
+      console.log(typeof hoTen);
+      console.log(typeof luong);
+      console.log(typeof hopLe);
+
+      /* các toán tử */
+      var tienLuong = 1000;
+      var soGioLam = 5;
+      var tongTienLuong = tienLuong * soGioLam;
+
+      console.log('tiền lương:', tongTienLuong);
+
+      var tienLuong1 = '1000';
+      var tienPhuCap = '50';
+
+      //ép kiểu dữ liệu: chuỗi -> số => cú pháp: Number(giaTri)
+      var tongLuong = Number(tienLuong1) + Number(tienPhuCap);
+      console.log('tổng tiền lương:', tongLuong);
+
+      tongLuong = tongLuong + 100;
+      // viết tắt
+      tongLuong += 100;
+      console.log(tongLuong);
+      //tương tự -= *= /= : thực hiện phép tính với giá trị của biến đó và gán lại cho nó
+
+      var number = 987;
+      var ketQua = 987 % 900; // % là phép chia lấy kq là phần dư
+      console.log('kết quả:', ketQua);
+
+      // các toán tử tiền tố và hậu tố
+      var iNumber = 1;
+      iNumber += 1; // 2
+      iNumber++; // 3 => lấy số hiện tại + 1 đơn vị
+      console.log(iNumber);
+      // console.log(++iNumber); // 4
+      console.log(iNumber++);
+
+      //hằng số (only one)
+      const PI = 3.14;
+      const DOMAIN = 'https://cybersoft.edu.vn';
+      // DOMAIN = '123';
+      //tính điểm trung bình của sv và in ra console.log
+
+      // debugger;
+
+      var diemToan = '4';
+      var diemLy = '3';
+      var diemHoa = '10';
+
+      var tongDiem = Number(diemToan) + Number(diemLy) + Number(diemHoa);
+      var diemTrungBinh = tongDiem / 3;
+      console.log(diemTrungBinh);
+      //input: diemToan:number, diemLy:number, diemHoa:number
+      //output: diemTrungBinh: number -> var diemTrungBinh = 0;
+      //progress: diemTrungBinh = (diemToan + diemLy + diemHoa) / 3
+      // in kq ra màn hình: console.log(diemTrungBinh)
+
+      //bài 2: tính chiều dài cạnh huyền của tam giác vuông có canh1 = 3, canh2 = 4
+      // Math.sqrt(giaTri) => căn bậc 2 của giá trị đó
+      var canh1 = 3;
+      var canh2 = 4;
+
+      var canh3 = 0;
+
+      canh3 = Math.sqrt(canh1 * canh1 + canh2 * canh2);
+      console.log('cạnh 3:', canh3);
+
+      /*bài 3: cho số nguyên n có 3 chữ số -> xuất ra màn hình tổng 3 ký số của số đó
+      ví dụ: 891 => 18 (8 + 9 + 1) */
+      // input: số n : number
+
+      /* B1: lấy số hàng trăm: tạo ra biến hangTram (soN/ 100) => 891/100 => 8.91 % 10 or Math.floor(8.91)
+      B2: hàng chục: 891 % 100 => 91 /10 => 9.1 % 10 => 9
+      B3: hàng đơn vị: 891 % 100 => 91 % 10 => 1*/
+
+      var soN = 891;
+      var tongBaSo = 0;
+      var hangTram = Math.floor(soN / 100);
+      console.log(hangTram);
+      var hangChuc = Math.floor((soN % 100) / 10);
+      console.log(hangChuc);
+      var hangDonVi = soN % 10;
+      console.log(hangDonVi);
+      var tongBaSo = hangTram + hangChuc + hangDonVi;
+      console.log('tổng 3 số:', tongBaSo);
+
+      // bài 4:
+
+      var tenPhim = 'hero';
+      var giaVeNguoiLon = 0;
+      var giaVeTreEm = 0;
+      var soVeNguoiLon = 50;
+      var soVeTreEm = 50;
+      var phanTram = 10;
+      var tongDoanhThu = 0;
+      var tienTuThien = 0;
+      var tienConLai = 0;
+      var tongVe = 0;
+
+      tongVe = soVeNguoiLon + soVeTreEm;
+
+      console.log(tongVe);
+    </script>
+
+    <!-- <p>nội dung trước khi thay đổi</p>
+    <input type="text" id="inf" placeholder="Nhấn em đi" />
+
+    <script>
+      var test = document.getElementById(inf).style;
+    </script> -->
+  </body>
+</html>

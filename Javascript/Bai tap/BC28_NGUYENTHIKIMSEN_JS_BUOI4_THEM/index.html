@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS-B4-Them</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" style="margin-top: 50px">
+      <div class="bai1">
+        <h4>
+          Bài 1: Viết chương trình nhập vào ngày, tháng, năm. Tìm ngày, tháng,
+          năm của ngày tiếp theo và của ngày trước đó.
+        </h4>
+        <div class="form-group row">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="day"
+              placeholder="Nhập ngày"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="month"
+              placeholder="Nhập tháng"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="year"
+              placeholder="Nhập năm"
+            />
+          </div>
+        </div>
+        <button class="btn btn-primary mr-2" id="btnNgayHomQua">
+          Ngày hôm qua
+        </button>
+        <button class="btn btn-primary" id="btnNgayMai">Ngày mai</button>
+        <div class="alert alert-primary my-4 p-4" id="ketQua_b1"></div>
+      </div>
+
+      <hr />
+      <div class="bai2">
+        <h4>
+          Bài 2: Viết chương trình nhập vào tháng, năm. Cho biết tháng đó có bao
+          nhiêu ngày. (bao gồm tháng của năm nhuận).
+        </h4>
+        <div class="form-group row">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="month2"
+              placeholder="Nhập tháng"
+            />
+          </div>
+
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="year2"
+              placeholder="Nhập năm"
+            />
+          </div>
+          <div class="col-4">
+            <button class="btn btn-success px-4" id="btnTinhNgay">
+              Tính ngày
+            </button>
+          </div>
+        </div>
+        <div class="alert alert-success p-4" id="ketQua_b2"></div>
+      </div>
+      <hr />
+      <div class="bai3">
+        <h4>
+          Bài 3: Viết chương trình nhập vào số nguyên có 3 chữ số. In ra cách
+          đọc
+        </h4>
+        <div class="form-group row">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="soN"
+              placeholder="Nhập số có 3 chữ số"
+            />
+          </div>
+          <div class="col-4">
+            <button class="btn btn-warning px-5" id="btnDocSo">Đọc số</button>
+          </div>
+        </div>
+        <div class="alert alert-warning p-4" id="ketQua_b3"></div>
+      </div>
+
+      <hr />
+      <div class="bai4">
+        <h4>Bài 4: Tìm sinh viên xa trường nhất</h4>
+        <div class="sinh_vien1">
+          <h5 style="color: grey">Sinh viên 1</h5>
+          <div class="form-group row">
+            <div class="col-4">
+              <input
+                type="text"
+                class="form-control"
+                id="tenSinhVien1"
+                placeholder="Nhập tên"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoX_Sv1"
+                placeholder="Nhập toạ độ x"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoY_Sv1"
+                placeholder="Nhập toạ độ y"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="sinh_vien2">
+          <h5 style="color: grey">Sinh viên 2</h5>
+          <div class="form-group row">
+            <div class="col-4">
+              <input
+                type="text"
+                class="form-control"
+                id="tenSinhVien2"
+                placeholder="Nhập tên"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoX_Sv2"
+                placeholder="Nhập toạ độ x"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoY_Sv2"
+                placeholder="Nhập toạ độ y"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="sinh_vien3">
+          <h5 style="color: grey">Sinh viên 3</h5>
+          <div class="form-group row">
+            <div class="col-4">
+              <input
+                type="text"
+                class="form-control"
+                id="tenSinhVien3"
+                placeholder="Nhập tên"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoX_Sv3"
+                placeholder="Nhập toạ độ x"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoY_Sv3"
+                placeholder="Nhập toạ độ y"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="truong">
+          <h5 style="color: grey">Trường học</h5>
+          <div class="form-group row">
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoX_Truong"
+                placeholder="Nhập toạ độ x"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="toaDoY_Truong"
+                placeholder="Nhập toạ độ y"
+              />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-danger px-5" id="btnTim">Tìm</button>
+        <div class="alert alert-danger p-4 mt-4" id="ketQua_b4"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

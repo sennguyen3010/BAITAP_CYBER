@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS-B6</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="bai2">
+        <h4>Bài 2: tính tổng các số chẵn từ 1 đến n. n do người dùng nhập</h4>
+        <div class="form-group row">
+          <div class="col-4">
+            <input
+              type="number"
+              class="form-control"
+              id="numberN"
+              placeholder="Nhập số"
+            />
+          </div>
+        </div>
+      </div> -->
+
+      <hr />
+      <h3>Bài tập 1: tính tổng từ 1 cho đến số người dùng nhập vào</h3>
+      <div class="alert alert-primary">
+        <p>ví dụ: người dùng nhập vào số 12</p>
+        <p>in ra kết quả: 1+ 2+ 3+ ...+ 12 = 78</p>
+      </div>
+      <div class="form-group">
+        <p>Nhập vào 1 số</p>
+        <input type="number" class="form-control" id="iSo1" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" id="btnTinhTong">Tính tổng</button>
+        <div class="alert alert-success mt-2" id="ketQua1"></div>
+      </div>
+      <hr />
+      <h3>
+        Bài tập 2: cho phép người dùng nhập vào 1 giá trị. in ra số div tương
+        ứng với giá trị đó với nội dung hello cybersoft
+      </h3>
+      <div class="form-group">
+        <p>Nhập vào giá trị</p>
+        <input class="form-control" id="iSo2" />
+        <button class="mt-2 btn btn-success" id="btnInTheDiv">
+          In thẻ div
+        </button>
+      </div>
+
+      <div id="ketQua2" style="border: 1px solid orange" class="mt-2">
+        <!-- <div class="alert alert-danger"></div> -->
+      </div>
+
+      <hr />
+      <h3>
+        Bài tập 3: cho phép người dùng nhập vào 1 số. cho biết số đó có phải là
+        số nguyên tố hay không
+      </h3>
+      <div class="form-group">
+        <p>Nhập vào 1 số</p>
+        <input type="number" class="form-control" id="iSo3" />
+        <button class="mt-2 btn btn-success" id="btnkiemTraSoNT">
+          Kiểm tra số NT
+        </button>
+      </div>
+      <div class="alert alert-success" id="ketQua3"></div>
+      <hr />
+      <h3>
+        Bài tập 4: cho phép người dùng nhập vào 1 số. tính tổng các số chẵn từ 2
+        -> số đó
+      </h3>
+      <div class="form-group">
+        <p>nhập vào 1 số</p>
+        <input type="number" class="form-control" id="iSo4" />
+        <button class="btn btn-success mt-2" id="btnTinhTongSoChan">
+          Tính tổng số chẵn
+        </button>
+      </div>
+      <div class="alert alert-success" id="ketQua4"></div>
+
+      <hr />
+      <h3>
+        Bài 5: cho phép người dùng nhập vào 1 số, in ra giao diện số ngôi sao
+        tương ứng
+      </h3>
+      <div class="alert alert-primary">
+        <p>ví dụ: người dùng nhập vào số 3</p>
+        <div>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <p>Nhập vào số lượng</p>
+        <input type="number" class="form-control" id="soSao" />
+        <button class="btn btn-success mt-2" id="btnInSoSao">In sao</button>
+      </div>
+      <div class="form-group alert alert-secondary" id="ketQua5"></div>
+      <hr />
+      <h3>
+        Bài tập 6: Cho phép người dùng nhập vào số hàng và số cột => in ra số
+        sao tương ứng
+      </h3>
+      <div class="alert alert-primary">
+        <p>ví dụ người dùng nhập vào: 3 hàng 5 cột</p>
+        <div>
+          <pre>
+
+            * * * * * 
+            * * * * * 
+            * * * * *
+          </pre>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-4">
+          <p>Nhập vào số cột</p>
+          <input class="form-control" id="soCot" />
+        </div>
+
+        <div class="col-4">
+          <p>Nhập vào số hàng</p>
+          <input class="form-control" id="soHang" />
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="btnInSao_b6" class="btn btn-success">In sao</button>
+      </div>
+      <div class="alert alert-primary" id="ketQua6"></div>
+
+      <hr />
+      <h3>
+        Bài 7: cho phép người dùng nhập vào 1 số. In ra các số nguyên tố từ 2
+        đến nhỏ hơn hoặc = số đó
+      </h3>
+      <div class="alert alert-primary">
+        <p>ví dụ: người dùng nhập vào số 7</p>
+        <p>kết quả: 2 3 5 7</p>
+      </div>
+      <div class="form-group">
+        <p>Nhập số</p>
+        <input type="number" class="form-control w-50" id="nhapSo7" />
+      </div>
+      <div class="form-group">
+        <button id="btnInSoNT">In số nguyên tố</button>
+      </div>
+      <div class="form-group mt-2 alert alert-success" id="ketQua7"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+.banner {
+  background-repeat: no-repeat;
+  position: relative;
+  .banner-layout {
+    .banner-about {
+      h1 {
+        @include text($text-base, $text-semibold, $text-c1-primary);
+      }
+      p {
+        @include text($text-6xl, $text-bold, $text-c1-dark);
+      }
+    }
+    .banner-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .banner-bottom {
+    margin-top: -120px;
+    img {
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      // margin-top: -60px;
+    }
+  }
+}
+
+//Responsive
+@media (max-width: $bp-xl) {
+  .banner {
+    .banner-layout {
+      .banner-about {
+        p {
+          font-size: 3.15rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $bp-lg) {
+  .banner {
+    .banner-layout {
+      margin: 60px 0;
+      .banner-about {
+        p {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .banner {
+    .banner-layout {
+      .banner-about {
+        p {
+          font-size: $text-4xl;
+        }
+      }
+    }
+  }
+}

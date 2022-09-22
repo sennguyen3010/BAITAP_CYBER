@@ -1,0 +1,128 @@
+.header {
+  transition: 300ms ease all;
+  position: relative;
+  z-index: 0;
+
+  .header-img {
+    position: absolute;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .header-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    .menu {
+      display: none;
+    }
+    .logo {
+      img {
+        width: 80px;
+      }
+    }
+    .nav {
+      justify-content: space-between;
+      margin-left: 180px;
+      a {
+        text-decoration: none;
+        margin-right: 40px;
+        @include text($text-xs, $text-semibold, $text-c1-dark);
+        &:hover {
+          color: $text-c1-primary;
+          transition: all 0.3s;
+          text-decoration: none;
+        }
+      }
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+
+      .contact-phone {
+        display: flex;
+        margin-right: 20px;
+        align-items: center;
+        i {
+          margin-right: 10px;
+        }
+      }
+      a {
+        margin-right: 10px;
+        color: $text-c1-dark;
+        align-items: center;
+        &:hover {
+          color: $text-c1-primary;
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  background-color: $bg-c1-secondary;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  top: 0;
+  box-shadow: 0 0 10px 0 rgb(204 204 204 / 50%);
+  animation: nav 0.5s;
+
+  .header-layout {
+    // justify-content: right;
+  }
+  .header-img {
+    display: none;
+  }
+  .logo {
+    opacity: 0;
+  }
+}
+@keyframes nav {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: $bp-xl) {
+  .header {
+    .header-img {
+    }
+    .header-bg {
+      background-color: $bg-c1-secondary;
+      position: relative;
+      .header-layout {
+        justify-content: left;
+        .menu {
+          display: block;
+          font-size: $text-3xl;
+          margin-right: 20px;
+        }
+        .logo {
+          img {
+            width: 100%;
+          }
+          height: 50px;
+          width: 50px;
+        }
+        .nav {
+          display: none;
+        }
+        .contact {
+          display: none;
+        }
+      }
+    }
+  }
+  .sticky {
+    .logo {
+      opacity: 1;
+    }
+  }
+}

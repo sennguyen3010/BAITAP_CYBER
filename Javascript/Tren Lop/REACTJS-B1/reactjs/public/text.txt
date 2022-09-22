@@ -1,0 +1,9 @@
+Xử lý 1 task or 1 chức năng trong reacts:
+
+- B1: xây dựng giao diện hoàn chỉnh: dàn layout, chia component
+
+- B2: xác định chức năng của ứng dụng (chưa kể lập trình)
+
+- B3: xác định thành phần thay đổi của giao diện (state). Binding state lên giao diện (string, boolean, number, object, …)
+
+- B4: xử lý sự kiện làm thay đổi state thông qua phương thức setState

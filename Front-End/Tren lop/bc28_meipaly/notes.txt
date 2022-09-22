@@ -1,0 +1,14 @@
+ css :
+  - layout ( làm phần tử vào đúng vị trí ) ( ưu tiên ):
+    + flex : 
+        * justify-content
+        * align-item
+        * flex-directions
+        * flex-wrap
+    + position : 
+        * fixed
+        * relative & absolute
+    + transform : 
+        * tranlate : x | y 
+    + grid
+  - làm đẹp ( làm sau cùng ) : font-size, color, ....

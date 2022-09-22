@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" style="margin-bottom: 500px">
+      <h3>ví dụ 1: tính trị tuyệt đối của 1 số</h3>
+      <div class="form-group">
+        <p>nhập vào 1 số</p>
+        <input type="text" class="form-control w-25" id="number1" />
+        <button class="btn btn-success mt-2" id="btnTinhTriTuyetDoi">
+          tính giá trị tuyệt đối
+        </button>
+      </div>
+      <div class="alert alert-success" id="ketQua1"></div>
+
+      <hr />
+      <h3>ví dụ 2: cho phép người dùng nhập vào 2 số => in ra số lớn nhất</h3>
+      <div class="form-group row">
+        <div class="col-4">
+          <p>nhập số thứ 1</p>
+          <input type="text" class="form-control" id="soThu1" />
+        </div>
+        <div class="col-4">
+          <p>nhập số thứ 2</p>
+          <input type="text" class="form-control" id="soThu2" />
+        </div>
+      </div>
+      <div class="mt-2 form-group">
+        <button class="btn btn-success" id="btnSoLonNhat">
+          In số lớn nhất
+        </button>
+      </div>
+      <div id="ketQua2" class="mt alert alert-success"></div>
+
+      <hr />
+      <h3>ví dụ 3: tính điểm trung bình và xếp loại theo công thức</h3>
+      <p class="alert alert-warning">
+        ví dụ người dùng nhập vào 5 6 7 -> DTB: 6 <br />
+        DTB bé 5: in ra học lực yếu <br />
+        DTB > = 5 và bé hơn 6.5: in ra học lực trung bình <br />
+        DTB > = 6.5 và bé hơn 8: in ra học lực khá <br />
+        DTB > = 8 và bé hơn = 10: in ra học lực giỏi
+      </p>
+      <div class="mt-2 form-group row">
+        <div class="col-4">
+          <p>nhập điểm toán</p>
+          <input type="text" class="form-control" id="diemToan" />
+        </div>
+        <div class="col-4">
+          <p>nhập điểm lý</p>
+          <input type="text" class="form-control" id="diemLy" />
+        </div>
+        <div class="col-4">
+          <p>nhập điểm hoá</p>
+          <input type="text" class="form-control" id="diemHoa" />
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="btnXepLoai" class="btn btn-success">xếp loại</button>
+      </div>
+      <div class="alert alert-success" id="ketQua3"></div>
+
+      <hr />
+      <h3>
+        bài tập 1: tính tiền lương. làm quá 40h thì từ tiếng thứ 41 trở đi sẽ
+        tính lương gấp 1.5
+      </h3>
+      <p class="alert alert-danger">
+        -ví dụ người dùng nhập: 40h và lương: 100
+        <br />
+        Tiền lương: 400 <br />
+        ví dụ người dùng nhập 45h và lương: 100 <br />
+        tiền lương: 400 + (5 * 1.5 * 100) => 470
+      </p>
+      <div class="form-group row">
+        <div class="col-4">
+          <p>nhập số giờ làm</p>
+          <input type="text" class="form-control" id="soGioLam" />
+        </div>
+        <div class="col-4">
+          <p>nhập lương / 1h</p>
+          <input type="text" class="form-control" id="luongCB" />
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <button id="btnTinhLuong" class="btn btn-success">tính lương</button>
+      </div>
+      <div class="alert alert-success" id="ketQua_b1"></div>
+
+      <hr />
+      <h3>tính tiền hàng</h3>
+      <div class="alert alert-warning">
+        <p>nếu số lượng bé hơn hoặc = 50 : tổng tiền = số lượng * đơn giá</p>
+        <p>
+          nếu số lượng > 50 và bé hơn = 100: tổng tiền = số lượng * đơn giá được
+          giảm 8%
+        </p>
+        <p>nếu số lượng > 100: tổng tiền = số lượng * đơn giá được giảm 12%</p>
+      </div>
+      <div class="form-group mt-2 row">
+        <div class="col-4">
+          <p>nhập tên sản phẩm</p>
+          <input type="text" class="form-control" id="tenSanPham" />
+        </div>
+        <div class="col-4">
+          <p>nhập số lượng</p>
+          <input type="text" class="form-control" id="soLuongSanPham" />
+        </div>
+        <div class="col-4">
+          <p>nhập đơn giá</p>
+          <input type="text" class="form-control" id="donGiaNhap" />
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="btnTinhTongTien" class="btn btn-primary">
+          tính tổng tiền
+        </button>
+      </div>
+      <div class="alert alert-primary" id="ketQua_b2"></div>
+
+      <hr />
+      <h3>
+        bài 3: viết chương trình cho phép nhập vào 1 số n từ 1 -> 4. in ra số đó
+        bằng chữ. lưu ý: khi người dùng nhập 1 số khác mà không phải 1, 2, 3, 4
+        => in ra giá trị k hợp lệ
+      </h3>
+      <div class="form-group">
+        <p>nhập vào 1 số</p>
+        <input type="text" class="form-control" id="nhapSo" />
+      </div>
+      <div class="form-group mt-2">
+        <button id="btnDocSo" class="btn btn-success">Đọc số</button>
+      </div>
+      <div id="ketQua_b3" class="alert alert-danger mt-2"></div>
+
+      <hr />
+      <h3>
+        bài 4: nhập vào tháng (nhập số) => in ra tên tháng và số ngày của tháng
+        đó (không tính năm nhuận)
+      </h3>
+      <div class="form-group">
+        <p>nhập vào tháng (number)</p>
+        <input id="soThang" class="form-control w-25" type="number" />
+      </div>
+      <div class="form-group">
+        <button id="btnInThangNgay" class="btn btn-success">
+          In tháng, ngày
+        </button>
+      </div>
+      <div class="alert alert-primary" id="ketQua_4"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

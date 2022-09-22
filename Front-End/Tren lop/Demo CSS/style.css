@@ -1,0 +1,28 @@
+.text__content {
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+}
+a span {
+  display: inline-block;
+  transition: all 1s;
+}
+a:hover {
+  color: #f55f8d;
+}
+a:hover span {
+  animation: upToDown 0.3s;
+}
+
+@keyframes upToDown {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}

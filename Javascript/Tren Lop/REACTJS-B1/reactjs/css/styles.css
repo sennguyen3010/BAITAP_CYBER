@@ -1,0 +1,6 @@
+.bg-films {
+  background: url(../img/background/avanger.jpg);
+  min-height: 100vh;
+  background-position: right bottom;
+  background-size: cover;
+}
